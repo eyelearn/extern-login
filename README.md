@@ -8,7 +8,7 @@ Der Private Schlüssel ist sicher zu verwahren und NICHT in ein Versionskontroll
 
 ```sh
 # Generiere Key
-openssl genrsa -des3 -out private.pem 2048
+openssl genrsa -des3 -out private.pem 4096
 
 # Erzeuge PEM Datei für privaten Schlüssel
 openssl rsa -in private.pem -out private_unencrypted.pem -outform PEM
