@@ -28,6 +28,18 @@ function login(nutzer_id: string, target_url?: string): string
 function register(nutzer_id: string, extra_data: any, target_url?: string): string
 ```
 
+Es wird dabei die fertige URL zurückgegeben. Bitte bei verlinkungen `rel=noopener` angeben.
+
+Wird der Nutzer zum 1. mal zu eyelearn geleitet muss der Link über die register Funktion generiert werden. Danach über login. Wichtig ist, dass die information ob der Nutzer über den register Link eyelearn besucht hat gespeichert ist damit danach der login link genommen wird. Dies ist am einfachsten zu erreichen indem ein redirect zwischengschaltet wird der dann einen entsprechenden Eintrag in der Datenbank setzt.
+
+### nutzer_id
+Muss eine eineindeutige Zuordnung des Nutzers sein. Max 25 Zeichen. Kann auch die interne nutzer_id sein.
+
+### target_url
+gibt die URL an z.B. `https://eyesee.eyelearn.at/?action=kurs&buy=1&id=246` auf deren Seite nach dem login verlinkt wird. Ist optional
+
+### extra_data
+
 in `extra_data` müssen folgende Felder vorhanden sein:
 
 1. vorname
