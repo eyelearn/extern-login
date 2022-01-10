@@ -1,0 +1,7 @@
+{
+    "name": "eyelearn/example",
+    "type": "project",
+    "require": {
+        "firebase/php-jwt": "^5.5"
+    }
+}
